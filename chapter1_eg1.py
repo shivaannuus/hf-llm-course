@@ -60,3 +60,5 @@ if __name__ == "__main__":
     text_gen_ret_str2 = text_generator("Cwm fjord bank glyphs vext quiz.", max_length=50, num_return_sequences=3)
     print_each("text_gen_ret_str", text_gen_ret_str)
     print_each("text_gen_ret_str2", text_gen_ret_str2)
+
+    

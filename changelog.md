@@ -25,5 +25,12 @@ pip install torch
 
 ![alt text](https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers.svg)
 
-* 编码器 “双向”（向前/向后）注意力，被称为自编码模型。
-* “解码器”模型仅使用 Transformer 模型的解码器部分。在每个阶段，对于给定的单词，注意力层只能获取到句子中位于将要预测单词前面的单词。这些模型通常被称为自回归模型
+* `编码器` “双向”（向前/向后）注意力，被称为自编码模型。
+* `解码器` 模型仅使用 Transformer 模型的解码器部分。在每个阶段，对于给定的单词，注意力层只能获取到句子中位于将要预测单词前面的单词。这些模型通常被称为自回归模型
+* `编码器-解码器模型`（也称为序列到序列模型）同时使用 Transformer 架构的编码器和解码器两个部分。在每个阶段，编码器的注意力层可以访问输入句子中的所有单词，而解码器的注意力层只能访问位于输入中将要预测单词前面的单词。
+
+|  模型   | 示例  | 任务|
+|  ----  | ----  |----|
+| 编码器  | ALBERT，BERT，DistilBERT，ELECTRA，RoBERTa |句子分类、命名实体识别、抽取式问答（从文本中提取答案）|
+| 解码器  | CTRL，GPT，GPT－2，Transformer XL  |文本生成|
+| 编码器-解码器  | BART，T5，Marian，mBART  |文本摘要、翻译、生成式问答（生成问题的回答类似 chatgpt）|
